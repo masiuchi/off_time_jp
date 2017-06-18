@@ -9,7 +9,7 @@ class OffTimeJp
   class << self
     def off_time?(datetime=nil)
       datetime ||= DateTime.now
-      new(datetime).off_time?
+      new(datetime.new_offset('+09:00')).off_time?
     end
   end
 
@@ -32,6 +32,6 @@ class OffTimeJp
   end
 
   def midnight?
-    @datetime.hour <= 5 && @datetime.hour >= 22
+    @datetime.hour <= 5 || @datetime.hour >= 22
   end
 end

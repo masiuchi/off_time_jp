@@ -47,6 +47,11 @@ class OffTimeJpTest < Minitest::Test
     refute OffTimeJp.off_time?(datetime)
   end
 
+  def test_off_time_in_not_jst
+    datetime = DateTime.new(2017, 6, 19, 21, 00, 00, '+06:00')
+    assert OffTimeJp.off_time?(datetime)
+  end
+
   def test_off_time_without_argument_at_off_time
     Timecop.freeze(DateTime.new(2017, 6, 17, 9, 30, 00, '+09:00'))
     assert OffTimeJp.off_time?
