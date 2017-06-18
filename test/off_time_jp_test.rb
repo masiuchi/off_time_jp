@@ -38,7 +38,10 @@ class OffTimeJpTest < Minitest::Test
 
   def test_off_time_at_midnight
     datetime = DateTime.new(2017, 6, 19, 23, 30, 00, '+09:00')
-    refute OffTimeJp.off_time?(datetime)
+    assert OffTimeJp.off_time?(datetime)
+
+    datetime = DateTime.new(2017, 6, 20, 1, 30, 00, '+09:00')
+    assert OffTimeJp.off_time?(datetime)
   end
 
   def test_off_time_on_weekday_at_day_time
