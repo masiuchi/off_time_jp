@@ -1,8 +1,6 @@
 # OffTimeJp
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/off_time_jp`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Off time of Japanese company.
 
 ## Installation
 
@@ -22,7 +20,22 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Ruby:
+```ruby
+require 'date'
+require 'off_time_jp'
+
+OffTimeJp.off_time?
+
+OffTimeJp.off_time?(DateTime.new(2017, 6, 18, 17, 50, 00, '+09:00'))
+```
+
+Shell:
+```bash
+$ off_time_jp
+
+$ off_time_jp 2017-06-18T17:50:00+09:00
+```
 
 ## Development
 
@@ -32,7 +45,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/off_time_jp.
+Bug reports and pull requests are welcome on GitHub at https://github.com/masiuchi/off_time_jp.
 
 
 ## License

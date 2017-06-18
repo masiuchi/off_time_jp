@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Masahiro IUCHI"]
   spec.email         = ["masahiro.iuchi@gmail.com"]
 
-  spec.summary       = %q{Japanse off time.}
-  spec.description   = %q{Japanse off time.}
+  spec.summary       = %q{Off time of Japanese company.}
+  spec.description   = %q{Off time of Japanese company.}
   spec.homepage      = "https://github.com/masiuchi/off_time_jp"
   spec.license       = "MIT"
 
