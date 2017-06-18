@@ -18,6 +18,12 @@ class OffTimeJpTest < Minitest::Test
     end
   end
 
+  def test_off_time_with_invalid_argument
+    assert_raises(ArgumentError) do
+      OffTimeJp.off_time?(123)
+    end
+  end
+
   def test_off_time_on_saturday
     datetime = DateTime.new(2017, 6, 17, 9, 30, 00, '+09:00')
     assert datetime.saturday?

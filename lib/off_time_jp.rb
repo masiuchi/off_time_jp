@@ -9,6 +9,7 @@ class OffTimeJp
   class << self
     def off_time?(datetime=nil)
       datetime ||= DateTime.now
+      raise ArgumentError unless datetime.is_a?(DateTime)
       new(datetime.new_offset('+09:00')).off_time?
     end
   end
