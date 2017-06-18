@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby
+
+require "off_time_jp"
